@@ -1,0 +1,15 @@
+D:\SuperMercado\SuperMercado\bin\Debug\net10.0\SuperMercado.exe
+D:\SuperMercado\SuperMercado\bin\Debug\net10.0\SuperMercado.deps.json
+D:\SuperMercado\SuperMercado\bin\Debug\net10.0\SuperMercado.runtimeconfig.json
+D:\SuperMercado\SuperMercado\bin\Debug\net10.0\SuperMercado.dll
+D:\SuperMercado\SuperMercado\bin\Debug\net10.0\SuperMercado.pdb
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\SuperMercado.GeneratedMSBuildEditorConfig.editorconfig
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\SuperMercado.AssemblyInfoInputs.cache
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\SuperMercado.AssemblyInfo.cs
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\SuperMercado.csproj.CoreCompileInputs.cache
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\SuperMercado.sourcelink.json
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\SuperMercado.dll
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\refint\SuperMercado.dll
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\SuperMercado.pdb
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\SuperMercado.genruntimeconfig.cache
+D:\SuperMercado\SuperMercado\obj\Debug\net10.0\ref\SuperMercado.dll
