@@ -7,6 +7,7 @@ public class Program
     public static void Main()
 
     {
+        List<Produto> produtos = new List<Produto>();
         Console.WriteLine("Seja bem vindo: ");
         bool repeteSistema = true;
         while(repeteSistema)
@@ -17,6 +18,7 @@ public class Program
             Console.WriteLine("3. Estoque");
             Console.WriteLine("4. Sair");
             Console.Write("\nDigite o numero da opcao que deseja: ");
+
             try
             {
                 int opcaoSelecionada = Convert.ToInt32(Console.ReadLine());
@@ -36,7 +38,7 @@ public class Program
                             {
                                 produto.Id = Convert.ToInt32(Console.ReadLine());
                             }
-                            catch (FormatException )
+                            catch (FormatException)
                             {
                                 Console.WriteLine("\nERRO, Valor invalido, tente novamente!");
                                 break;
@@ -56,7 +58,7 @@ public class Program
                             try
                             {
                                 int quantidadeAdicionarNoEstoque = Convert.ToInt32(Console.ReadLine());
-                                if(quantidadeAdicionarNoEstoque <= 0)
+                                if (quantidadeAdicionarNoEstoque <= 0)
                                 {
                                     Console.WriteLine("\nERRO, DEVE HAVER PELO MENOS 1 UNIDADE DO PRODUTO PARA ADICIONAR");
                                     break;
@@ -66,7 +68,7 @@ public class Program
                                     produto.QuantidadeParaAdicionarNoEstoque = quantidadeAdicionarNoEstoque;
                                 }
                             }
-                            catch(FormatException)
+                            catch (FormatException)
                             {
                                 Console.WriteLine("\nErro, Valor invalido , tente novamente!");
                                 break;
@@ -75,9 +77,9 @@ public class Program
                             Console.Write("Preco de compra: ");
                             try
                             {
-                                decimal precoDeCompra = Convert.ToDecimal(Console.ReadLine());
+                                produto.PrecoCompra = Convert.ToDecimal(Console.ReadLine());
                             }
-                            catch(FormatException)
+                            catch (FormatException)
                             {
                                 Console.WriteLine("\nERRO, Valor invalido, tente novamente");
                                 break;
@@ -85,14 +87,16 @@ public class Program
                             Console.Write("Preco de Venda: ");
                             try
                             {
-                                decimal precoDeVenda = Convert.ToDecimal(Console.ReadLine());
+                                produto.PrecoVenda = Convert.ToDecimal(Console.ReadLine());
                             }
-                            catch(FormatException)
+                            catch (FormatException)
                             {
                                 Console.WriteLine("\nERRO, Valor invalido, tente novamente");
                                 break;
                             }
+                            produtos.Add(produto);
                             break;
+
                     }
                 }
 
