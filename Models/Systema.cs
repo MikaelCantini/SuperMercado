@@ -6,7 +6,10 @@ namespace SuperMercado.Models
 {
     public class Systema
     {
-
+        public void MostraMenu()
+        {
+            
+        }
 
         
     }
