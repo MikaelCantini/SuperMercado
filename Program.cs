@@ -97,6 +97,23 @@ public class Program
                             produtos.Add(produto);
                             break;
 
+                        case 2:
+                            Console.Write("Digite o ID do produto para remover do sistema: ");
+                            try
+                            {
+                                int idParaRemover = Convert.ToInt32(Console.ReadLine());
+                                Produto nomeDeletado = produtos.Find(u => u.Id == idParaRemover);
+                                produtos.RemoveAll(u => u.Id == idParaRemover);  
+                                Console.WriteLine($"Produto {nomeDeletado} Removido com sucesso");
+                                
+                            }
+                            catch(Exception)
+                            {
+                                Console.WriteLine("ERRO, valor invalido, verifique se o valor existe ou foi digitado certo");
+                            }
+                            break;
+
+
                     }
                 }
 
