@@ -104,13 +104,27 @@ public class Program
                                 int idParaRemover = Convert.ToInt32(Console.ReadLine());
                                 Produto nomeDeletado = produtos.Find(u => u.Id == idParaRemover);
                                 produtos.RemoveAll(u => u.Id == idParaRemover);  
-                                Console.WriteLine($"Produto {nomeDeletado} Removido com sucesso");
+                                Console.WriteLine($"Produto {nomeDeletado.Nome} Removido com sucesso");
                                 
                             }
                             catch(Exception)
                             {
                                 Console.WriteLine("ERRO, valor invalido, verifique se o valor existe ou foi digitado certo");
                             }
+                            break;
+                        case 3:
+                            foreach(Produto produto1 in produtos)
+                            {
+                                Console.WriteLine($"Id: {produto1.Id}");
+                                Console.WriteLine($"Nome: {produto1.Nome}");
+                                Console.WriteLine($"Quantidade no Estoque: {produto1.QuantidadeParaAdicionarNoEstoque}");
+                                Console.WriteLine($"Preco de Compra: {produto1.PrecoCompra}");
+                                Console.WriteLine($"Preco de Venda: {produto1.PrecoVenda}");
+                                Console.WriteLine("=====================================================================");
+                            }
+                            break;
+                        case 4:
+                            repeteSistema = false;
                             break;
 
 
@@ -120,7 +134,7 @@ public class Program
             }
             catch (FormatException)
             {
-                Console.WriteLine("\n Valor invalido , tente novamente");
+                Console.WriteLine("\nValor invalido , tente novamente");
             }
         }
 
