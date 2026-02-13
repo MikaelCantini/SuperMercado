@@ -18,6 +18,7 @@ public class Program
             Console.WriteLine("3. Estoque");
             Console.WriteLine("4. Sair");
             Console.Write("\nDigite o numero da opcao que deseja: ");
+            
 
             try
             {
@@ -25,18 +26,27 @@ public class Program
                 if (opcaoSelecionada <= 0 || opcaoSelecionada >= 5)
                 {
                     Console.WriteLine("Opcao selecionada nao existe, tente novamente");
+                    Thread.Sleep(1000);
+                    Console.Clear();
                 }
                 else
-                {
-                    switch(opcaoSelecionada)
-                    {
+                {   
+                    Console.WriteLine("====================================================================="); 
+                    switch (opcaoSelecionada)
+                    {   
                         case 1:
+
                             Produto produto = new Produto();
                             Console.WriteLine("\nPreencha os dados do produto: ");
                             Console.Write("\nId: ");
                             try
                             {
                                 produto.Id = Convert.ToInt32(Console.ReadLine());
+                                bool jaExiste = produtos.Exists(u => u.Id == produto.Id);
+                                if (jaExiste)
+                                {
+                                    Console.WriteLine("ERRO , O ID INFORMADO JA EXISTE NO SISTEMA");
+                                }
                             }
                             catch (FormatException)
                             {
@@ -54,26 +64,7 @@ public class Program
                             {
                                 produto.Nome = nomeProduto;
                             }
-                            Console.Write("Quantos quer adicionar ao estoque: ");
-                            try
-                            {
-                                int quantidadeAdicionarNoEstoque = Convert.ToInt32(Console.ReadLine());
-                                if (quantidadeAdicionarNoEstoque <= 0)
-                                {
-                                    Console.WriteLine("\nERRO, DEVE HAVER PELO MENOS 1 UNIDADE DO PRODUTO PARA ADICIONAR");
-                                    break;
-                                }
-                                else
-                                {
-                                    produto.QuantidadeParaAdicionarNoEstoque = quantidadeAdicionarNoEstoque;
-                                }
-                            }
-                            catch (FormatException)
-                            {
-                                Console.WriteLine("\nErro, Valor invalido , tente novamente!");
-                                break;
-
-                            }
+                            
                             Console.Write("Preco de compra: ");
                             try
                             {
@@ -117,7 +108,6 @@ public class Program
                             {
                                 Console.WriteLine($"Id: {produto1.Id}");
                                 Console.WriteLine($"Nome: {produto1.Nome}");
-                                Console.WriteLine($"Quantidade no Estoque: {produto1.QuantidadeParaAdicionarNoEstoque}");
                                 Console.WriteLine($"Preco de Compra: {produto1.PrecoCompra}");
                                 Console.WriteLine($"Preco de Venda: {produto1.PrecoVenda}");
                                 Console.WriteLine("=====================================================================");
@@ -135,6 +125,8 @@ public class Program
             catch (FormatException)
             {
                 Console.WriteLine("\nValor invalido , tente novamente");
+                Thread.Sleep(1000);
+                Console.Clear();
             }
         }
 
